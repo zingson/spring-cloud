@@ -1,3 +1,6 @@
-rootProject.name = 'spring-cloud'
+rootProject.name = 'spring-cloud-example'
 
-include 'cloud-config'
+//服务注册中心
+//include 'cloud-eureka'
+
+include 'cloud-config-server'
