@@ -31,7 +31,7 @@ public class Application {
         SpringApplication app = new SpringApplication(Application.class);
         Map<String,Object> defaultMap = new HashMap<>();
 
-        // 启动没读取uri配置信息
+        // 启动没读取uri配置信息?????
         defaultMap.put("spring.cloud.config.uri","http://127.0.0.1:8080/");
         app.setDefaultProperties(defaultMap);
         app.run(args);

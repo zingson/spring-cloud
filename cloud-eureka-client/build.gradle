@@ -3,10 +3,8 @@ buildscript {
         springBootVersion = '2.0.0.RELEASE'
     }
     repositories {
-        maven {
-            jcenter()
-            url 'https://repo.spring.io/libs-milestone'
-        }
+        jcenter()
+        maven {url 'https://repo.spring.io/libs-milestone'}
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -27,11 +25,14 @@ dependencyManagement {
 
 dependencies {
 
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
-    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    //容错管理,必须添加
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
 
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
 
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile "junit:junit"
+
 }
