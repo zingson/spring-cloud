@@ -8,6 +8,6 @@ spring:
       server:
         git:
           uri: https://github.com/zengs01/spring-cloud-example
-          search-paths:
+          search-paths: cloud-config-server/config-repo
           username: zengs01
           password: agile1631@163.com
