@@ -1,42 +1,18 @@
 group 'com.zengs.cloud'
 version '1.0'
 
-
-
-
-allprojects {
-
-    /*task createJavaProject << {
-        sourceSets*.java.srcDirs*.each { it.mkdirs() }
-        sourceSets*.resources.srcDirs*.each { it.mkdirs() }
-    }
-    task createWebProject(dependsOn: 'createJavaProject') << {
-        def webAppDir = file("$webAppDirName")
-        webAppDir.mkdirs()
-    }*/
-
-}
-
 subprojects {
     apply plugin: 'java'
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
-    
+
     [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
     compileJava*.options*.compilerArgs=[/*"-Xlint:unchecked",*/ "-g:vars", "-g:lines", "-g:source"]
-
-    /*repositories {
-        jcenter()
-        maven { url 'https://repo.spring.io/release/' }
-        maven { url "http://repo.spring.io/libs-snapshot-local" }
-        maven { url "http://repo.spring.io/libs-milestone-local" }
-        maven { url "http://repo.spring.io/libs-release-local" }
-    }*/
 
     repositories {
         mavenCentral()
         jcenter()
-        maven { url 'https://repo.spring.io/libs-milestone' }
+        maven {url 'https://repo.spring.io/libs-milestone'}
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public'}
         //maven { url 'https://jitpack.io' }
     }

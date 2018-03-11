@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    config:
+      profile: test
+      label: master
+      uri: http://127.0.0.1:8080/
+
+
+

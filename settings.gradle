@@ -4,3 +4,4 @@ rootProject.name = 'spring-cloud-example'
 //include 'cloud-eureka'
 
 include 'cloud-config-server'
+include 'cloud-config-client'
