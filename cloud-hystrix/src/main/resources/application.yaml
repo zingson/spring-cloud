@@ -1,0 +1,20 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: cloud-hystrix
+
+# 注册中心配置
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    # 向注册中心注册自己
+    register-with-eureka: true
+    # 注册中心检索服务
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9001/eureka/
+  server:
+    # 关闭保护机制确保将不可用的实例正确剔除
+    enable-self-preservation: false
