@@ -8,10 +8,10 @@ include 'cloud-eureka-client'
 include 'cloud-config-server'
 include 'cloud-config-client'
 
-//客户端负载均衡
-//include 'cloud-ribbon-service1'
-//include 'cloud-ribbon-service2'
+//服务消费者 发现者
+include 'ribbon-consumer'
+include 'ribbon-discoverer'
+
 
 //服务容错保护
 include 'cloud-hystrix'
-

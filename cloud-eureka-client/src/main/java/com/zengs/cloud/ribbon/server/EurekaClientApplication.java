@@ -1,4 +1,4 @@
-package com.zengs.cloud.eureka.server;
+package com.zengs.cloud.ribbon.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
