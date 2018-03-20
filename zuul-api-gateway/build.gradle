@@ -19,3 +19,21 @@ dependencyManagement {
     }
 }*/
 
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
+
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+
+    compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+}
+
+
+
+task runApp(type: JavaExec){
+    main = '';
+    args = '';
+}

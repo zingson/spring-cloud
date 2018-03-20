@@ -3,7 +3,7 @@
 
 Spring Cloud 项目示例。
 
-文档：http://cloud.spring.io/spring-cloud-static/Finchley.M7/single/spring-cloud.html
+文档：http://cloud.spring.io/spring-cloud-static/Finchley.M8/single/spring-cloud.html
 
 
 ## 配置中心
