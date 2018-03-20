@@ -24,7 +24,7 @@ Spring Cloud Ribbon是一个基于HTTP和TCP的客户端负载均衡工具，它
 
 ## 服务调用
 
-## 网关服务
+## API网关服务（Zuul）
 
 
 ## 消息总线

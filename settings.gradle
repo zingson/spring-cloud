@@ -1,17 +1,18 @@
 rootProject.name = 'spring-cloud-example'
 
 //服务注册中心
-include 'cloud-eureka-server'
-include 'cloud-eureka-client'
+include 'cloud-eureka-server','cloud-eureka-client'
 
 //分布式配置中心
-include 'cloud-config-server'
-include 'cloud-config-client'
+include 'cloud-config-server','cloud-config-client'
 
 //服务消费者 发现者
-include 'ribbon-consumer'
-include 'ribbon-discoverer'
+include 'ribbon-consumer','ribbon-discoverer'
 
 
 //服务容错保护
 include 'cloud-hystrix'
+
+
+//API服务网关
+include 'zuul-api-gateway'
