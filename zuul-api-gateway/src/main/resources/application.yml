@@ -1,8 +1,8 @@
 spring:
   application:
-    name: ribbon-consumer-service
+    name: api-gateway
 server:
-  port: 9002
+  port: 9003
 eureka:
   instance:
     hostname: 127.0.0.1
@@ -12,3 +12,11 @@ eureka:
   server:
     # 关闭保护机制，确保注册中心可以将不可用的实例正确剔除
     enable-self-preservation: false
+zuul:
+  routes:
+    api-a:
+      path: '/api-a/*'
+      url:  'http://localhost:8088'
+    api-b:
+      path: '/api-b/*'
+      serviceId: 'hello-service'
