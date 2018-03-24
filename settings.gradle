@@ -16,3 +16,12 @@ include 'cloud-hystrix'
 
 //API服务网关
 include 'zuul-api-gateway'
+
+//rabbitmq 测试
+include 'rabbitmq-demo'
+
+// cloud bus
+include 'cloud-bus-rabbitmq-hello'
+
+
+

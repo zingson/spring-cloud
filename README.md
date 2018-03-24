@@ -31,9 +31,11 @@ Spring Cloud Ribbon是一个基于HTTP和TCP的客户端负载均衡工具，它
 @EnableZuulProxy 开启API服务网关功能
 
 
-## 消息总线
+## 消息总线（Bus）
 
-## 消息驱动
+
+
+## 消息驱动的微服务（Stream）
 
 
 ## 服务跟踪

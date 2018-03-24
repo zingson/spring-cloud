@@ -15,8 +15,14 @@ buildscript {
     }
 }
 
+apply plugin: 'idea'
+idea.project {
+    jdkName = '1.8'
+    languageLevel = '1.8'
+}
+
 allprojects {
-    apply plugin: 'idea'
+
 }
 
 subprojects {
@@ -36,7 +42,7 @@ subprojects {
         //maven { url 'https://jitpack.io' }
     }
 
-    //Spring boot 与 spring cloud 依赖管理插件
+    //'Spring boot' and 'spring cloud' dependencies plugins
     apply plugin: 'org.springframework.boot'
     apply plugin: "io.spring.dependency-management"
     dependencyManagement {
@@ -47,18 +53,8 @@ subprojects {
     dependencies {
         compile 'org.springframework.boot:spring-boot-starter-web'
         compile 'org.springframework.boot:spring-boot-starter-actuator'
-
-        /*compile(
-                //log4j2
-                'org.apache.logging.log4j:log4j-api:2.8.1',
-                'org.apache.logging.log4j:log4j-core:2.8.1',
-                'org.apache.logging.log4j:log4j-slf4j-impl:2.8.1',
-                'org.slf4j:slf4j-api:1.7.25',
-        )*/
-        //compile fileTree(dir: 'src/main/webapp/WEB-INF/lib', include: ['*.jar'])
-        /*testCompile(
-                'junit:junit:4.12',
-        )*/
+        compile fileTree(dir: 'src/main/resources/lib', include: ['*.jar'])
+        testCompile 'org.springframework.boot:spring-boot-starter-test'
     }
 }
 
@@ -67,4 +63,5 @@ project(':zuul-api-gateway'){
     dependencies {
         compile 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
     }
-}*/
+}
+*/

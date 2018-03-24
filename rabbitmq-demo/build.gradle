@@ -1,0 +1,7 @@
+
+dependencies {
+    compile 'com.rabbitmq:amqp-client:4.1.0'
+
+}
+
+
